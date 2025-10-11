@@ -49,12 +49,13 @@ public class Task3 {
         System.out.println("Church fee: " + churchFee);
         System.out.println("Tax: " + tax);
         System.out.println("Net salary: " + netSalary(grossSalary)); //invoked from netSalary() method
+
+        scanner.close();
     }
 
     public static void main(String[] args)
     {
 
         readSalary();
-
     }
 }

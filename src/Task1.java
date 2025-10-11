@@ -16,6 +16,5 @@ public class Task1 {
         System.out.println(capitalize(sentence)); //uses capitalize method to capitalize user input (sentence)
 
         scanner.close();
-
     }
 }

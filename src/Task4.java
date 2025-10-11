@@ -12,12 +12,12 @@ public class Task4 {
         int group3 = 0;
 
         System.out.println("Enter 10 people's age: ");
-        for (int i = 0; i < age.length; i++) { //loops input into age[i]
-            age[i] = scanner.nextInt();
+        for (int start = 0; start < age.length; start++) { //loops input into age[i]
+            age[start] = scanner.nextInt();
 
-            if (age[i] < 18) { //checks the different ages and sorts into groups
+            if (age[start] < 18) { //checks the different ages and sorts into groups
                 group1++;
-            } else if (age[i] <= 65) {
+            } else if (age[start] <= 65) {
                 group2++;
             } else group3++;
 
@@ -27,5 +27,6 @@ public class Task4 {
         System.out.println("18-65: " + group2 + " people");
         System.out.println("<65: " + group3 + " people");
 
+        scanner.close();
     }
 }

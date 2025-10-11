@@ -48,6 +48,8 @@ public class Task2 {
                     System.exit(1);
                 }
             }
+
+            scanner.close();
         } while (true);
 
     }
