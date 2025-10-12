@@ -16,8 +16,10 @@ public class Task6 {
         for (int i = 0; i < stringArray.length; i++) { //loops through stringArray - convert to int and store in intArray[i]
             intArray[i] = Integer.parseInt(stringArray[i].trim());
 
-            if (intArray[i] > maxElem) maxElem = intArray[i]; //if element > maxElem -> make maxElem
-            if (intArray[i] < minElem) minElem = intArray[i]; //if element < minElem -> make minElem
+            if (intArray[i] > maxElem)
+                maxElem = intArray[i]; //if element > maxElem -> make maxElem
+            if (intArray[i] < minElem)
+                minElem = intArray[i]; //if element < minElem -> make minElem
 
         }
 
