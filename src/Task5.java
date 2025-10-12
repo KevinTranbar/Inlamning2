@@ -39,7 +39,7 @@ public class Task5 {
 
         int[] intArray = new int[stringArray.length]; //declare intArray with same number of elements as stringArray
 
-        for (int i = 0; i < stringArray.length; i++) { //loops through stringArray - convert to int and store in intArray
+        for (int i = 0; i < stringArray.length; i++) { //loops through stringArray - convert to int and store in intArray[i]
             intArray[i] = Integer.parseInt(stringArray[i].trim());
         }
 
