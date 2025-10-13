@@ -30,8 +30,8 @@ public class Task7 {
 
         scanner.nextLine(); //needed to clear leftover newline caused by mixing nextInt and nextLine
 
+        System.out.println("Enter matrix (number): ");
         for (int i = 0; i < rows; i++) { //loop, asks for elements in each row depending on how many rows
-            System.out.println("Enter elements in row " + (i + 1) + " seperated by commas: ");
             String[] stringArray = scanner.nextLine().split(",+"); //stores the string in stringArray
 
             for (int j = 0; j < cols; j++) { //loop, converts to int and trims and then adds to matrix
