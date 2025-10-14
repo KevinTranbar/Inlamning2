@@ -31,6 +31,23 @@ public class Task3 {
             netSalary += salary - 468 - ((52.35 / 100) * (salary - 468)); //final netSalary if < 675 but > 468 (tax lvl 3)
         } //return not needed here because there aren't any more calculations after
 
+        /*
+        netSalary = salary - (salary * 0.2);
+
+        if (salary < 200) {
+            return netSalary - churchFee;
+        } else if (salary < 468) {
+            netSalary = salary - (salary * 0.3212) + 160;
+            return netSalary - churchFee;
+        } else if (salary < 675) {
+            netSalary = salary - (salary * 0.3382) + salary - (salary * 0.3212);
+            return netSalary - churchFee;
+        } else {
+
+        }
+
+         */
+
         return netSalary - churchFee;
     }
 
