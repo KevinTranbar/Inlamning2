@@ -25,9 +25,9 @@ public class Task6 {
 
         int [][] matrix = new int[intArray.length][intArray.length]; //creates a matrix with equal rows and columns based intArray length
 
-        for (int row = 0; row < matrix.length; row++) { //determines how many rows in matrix, goes through each one in loop
-           for (int col = 0; col < matrix[row].length; col++) { //for every row, check how many elements in current row and loop accordingly
-               matrix[row][col] = intArray[row] + col; /* current element in matrix at row/col, intArray[row] is the value of user input at index[row] - example:
+        for (int row = 0; row < matrix.length; row++) { //determines how many rows in matrix, iterates through each one
+           for (int col = 0; col < matrix[row].length; col++) { //for every row, iterate through each element(column) in row
+               matrix[row][col] = intArray[row] + col; /* current element in matrix at row/col, intArray[row] is the value of user input at intArray index[row] - example:
                                                                                                                                                     input: 1, 2, 3
                                                                                                                                                     first loop:
                                                                                                                                                     intArray[0] = 1

@@ -2,24 +2,34 @@ import java.util.Scanner;
 
 public class Task2 {
 
-    public static boolean validInvalid(String ssn) { //method to check if ssn is valid
-        if ((ssn.length() == 13) && //checks character length
-                Character.isDigit(ssn.charAt(0)) && //checks so index 0: 7 and 9 : 12 are digits
-                Character.isDigit(ssn.charAt(1)) &&
-                Character.isDigit(ssn.charAt(2)) &&
-                Character.isDigit(ssn.charAt(3)) &&
-                Character.isDigit(ssn.charAt(4)) &&
-                Character.isDigit(ssn.charAt(5)) &&
-                Character.isDigit(ssn.charAt(6)) &&
-                Character.isDigit(ssn.charAt(7)) &&
-                Character.isDigit(ssn.charAt(9)) &&
-                Character.isDigit(ssn.charAt(10)) &&
-                Character.isDigit(ssn.charAt(11)) &&
-                Character.isDigit(ssn.charAt(12)) &&
-                (ssn.charAt(8) == '-')) { //checks so index 8 is a hyphen
-            return true; //if conditions = true -> validInvalid = true
+    public static boolean length (String ssn) {
+
+        return ssn.length() == 13; //returns true if length == 13
+    }
+
+    public static boolean elems (String ssn) { //checks if ssn has 12 digits and 1 hyphen
+        int isDigit = 0;
+        int isHyphen = 0;
+
+        for (int i = 0; i < ssn.length(); i++) { //checks through ssn -> adds 1 when char is digit
+            if (Character.isDigit(ssn.charAt(i))) {
+                isDigit++;
+            }
+
         }
-        else return false; //if else -> validInvalid = false
+
+        for (int i = 0; i < ssn.length(); i++) { //checks through ssn -> adds 1 when char is hyphen
+            if (ssn.charAt(i) == '-') {
+                isHyphen++;
+            }
+        }
+
+        return isDigit == 12 && isHyphen == 1; //returns true if exactly 12 digits and 1 hyphen
+    }
+
+    public static boolean validInvalid (String ssn) { //method to check if ssn is valid or invalid
+
+        return length(ssn) && elems(ssn); //if length and elems is valid -> true
     }
 
     public static void main(String[] args) { //main execution
@@ -40,16 +50,14 @@ public class Task2 {
             switch (selection) { //selection - "continue" or "exit"
                 case "continue" -> {
                 }
-                case "exit" -> {
+                case "exit" ->
                     System.exit(1); //shut down program - break; -> exits switch, not do-while loop
-                }
+
                 default -> {
                     System.out.println("Invalid selection, enter 'continue' to continue and 'exit' to quit");
                     System.exit(1);
                 }
             }
-
-            scanner.close();
         } while (true);
 
     }

@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Task1 {
 
     public static String capitalize(String sentence) { //method to capitalize sentence
+
         return sentence.toUpperCase();
     }
 
