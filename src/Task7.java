@@ -4,14 +4,15 @@ public class Task7 {
 
     public static void rotateMatrix(int[][] matrix) {
 
-        for (int col = 0; col < matrix[0].length; col++) { //loop, checks how many elements in first row of matrix, only works if matrix is rectangular because base whole matrix on length of row 1
-            for (int row = matrix.length - 1; row >= 0; row--) { //loop, sets start at end with matrix.length - 1 = ex 2 (3 rows) which is the last in 0 counting, row >= 0 and row--: keeps going until reached start
+        for (int col = 0; col < matrix[0].length; col++) { //loop over each column of the matrix (using first row length)
+            for (int row = matrix.length - 1; row >= 0; row--) { //print elements from bottom to top in current column
+                //matrix.length = n of rows in matrix, how many rows - 1 gives last row index because array index start at 0 example: n of rows in m: 4, if -1 = 3 matrix[3][0] is then last number in column 1
 
-                System.out.print(matrix[row][col] + " ");
+                System.out.print(matrix[row][col] + " "); //prints elements of current column from bottom to top on the same line (rotate)
 
             }
 
-            System.out.println();
+            System.out.println(); //new line after each column elements has been printed on same line (rotate)
 
         }
     }
