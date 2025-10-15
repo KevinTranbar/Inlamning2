@@ -22,14 +22,12 @@ public class Task7 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter number of rows: ");
-        int rows = scanner.nextInt(); //rows
+        int rows = Integer.parseInt(scanner.nextLine()); //rows
 
         System.out.println("Enter number of columns: ");
-        int cols = scanner.nextInt(); //columns
+        int cols = Integer.parseInt(scanner.nextLine()); //columns
 
         int[][] matrix = new int[rows][cols];
-
-        scanner.nextLine(); //needed to clear leftover newline caused by mixing nextInt and nextLine
 
         System.out.println("Enter matrix (number): ");
         for (int i = 0; i < rows; i++) { //loop, asks for elements in each row depending on how many rows
