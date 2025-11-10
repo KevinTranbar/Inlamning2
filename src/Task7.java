@@ -22,10 +22,10 @@ public class Task7 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter number of rows: ");
-        int rows = Integer.parseInt(scanner.nextLine()); //rows
+        int rows = Integer.parseInt(scanner.nextLine()); //rows, reads in string then converts to int -> store in rows
 
         System.out.println("Enter number of columns: ");
-        int cols = Integer.parseInt(scanner.nextLine()); //columns
+        int cols = Integer.parseInt(scanner.nextLine()); //columns, reads in string then converts to int -> store in cols
 
         int[][] matrix = new int[rows][cols];
 
