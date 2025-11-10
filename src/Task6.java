@@ -16,7 +16,7 @@ public class Task6 {
         }
 
         for (int row = 0; row < intArray.length; row++) { //determines how many rows in matrix, iterates through each one
-            var pos = row; //create position that resets to value of row every row loop
+            int pos = row; //create position that resets to value of row every row loop
 
             for (int i = 0; i < intArray.length; i++) { //iterates through elems in intArray[i]
 
