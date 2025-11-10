@@ -62,10 +62,10 @@ public class Task3 {
         double tax = grossSalary - netSalary(grossSalary) - churchFee; //calculated tax
 
         //results
-        System.out.println("Gross salary: " + grossSalary);
-        System.out.println("Church fee: " + churchFee);
-        System.out.println("Tax: " + tax);
-        System.out.println("Net salary: " + netSalary(grossSalary)); //invoked from netSalary() method
+        System.out.printf("Gross salary: %.2f%n", grossSalary);
+        System.out.printf("Church fee: %.2f%n", churchFee);
+        System.out.printf("Tax: %.2f%n", tax);
+        System.out.printf("Net salary: %.2f%n", netSalary(grossSalary)); //invoked from netSalary() method
 
         scanner.close();
     }

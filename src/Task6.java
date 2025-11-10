@@ -13,22 +13,20 @@ public class Task6 {
 
         for (int i = 0; i < stringArray.length; i++) { //loops through stringArray - convert to int and store in intArray[i]
             intArray[i] = Integer.parseInt(stringArray[i].trim());
-
         }
 
-        int [][] matrix = new int[intArray.length][intArray.length]; //creates a matrix with equal rows and columns based intArray length
+        for (int row = 0; row < intArray.length; row++) { //determines how many rows in matrix, iterates through each one
+            var pos = row; //create position that resets to value of row every row loop
 
-        for (int row = 0; row < matrix.length; row++) { //determines how many rows in matrix, iterates through each one
-            for (int col = 0; col < matrix[row].length; col++) { //for every row, iterate through each element(column) in row
+            for (int i = 0; i < intArray.length; i++) { //iterates through elems in intArray[i]
 
-                if (row > 0) { //after first row, set current elem to next elem in prior row
-                    intArray[col] = matrix[row - 1][(col + 1) % matrix[row].length]; //warp around to column 0(index(0)) if goes past current row length
-
+                if (pos == intArray.length) { //if pos is equal to length(out of bounds) reset pos to 0(index)
+                    pos = 0;
                 }
 
-                matrix[row][col] = intArray[col]; //set current elem in matrix to value from intArray at same column
+                System.out.print(intArray[pos] + " "); //print intArray at index pos
 
-                System.out.print(matrix[row][col] + " "); //print current elem in matrix in current row
+                pos++; //move position one step forward
 
             }
 

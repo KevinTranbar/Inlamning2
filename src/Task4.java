@@ -23,9 +23,9 @@ public class Task4 {
 
         }
 
-        System.out.println("<18: " + group1 + " people");
-        System.out.println("18-65: " + group2 + " people");
-        System.out.println("<65: " + group3 + " people");
+        System.out.printf("<18: %d people %n", group1);
+        System.out.printf("18-65: %d people %n", group2);
+        System.out.printf("<65: %d people %n", group3);
 
         scanner.close();
     }

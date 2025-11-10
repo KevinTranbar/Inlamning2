@@ -7,7 +7,7 @@ public class Task5 {
         for (int i = 0; i < subArray.length - 1; i++) { //loop through array, checking for increasing subarrays
 
             if (subArray[i] < subArray[i + 1]) { //start of an increasing subarray found -> print the first element
-                System.out.print("[" + subArray[i]);
+                System.out.print("[" + subArray[i]); //cosmetic :)
 
                 while (i + 1 < subArray.length && subArray[i] < subArray[i + 1]) { //continue while next element is greater -> increment by one(skip first elem in first loop) and print rest elements
                     i++;
