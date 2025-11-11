@@ -41,5 +41,5 @@ public class Task7 {
         rotateMatrix(matrix); //calls rotateMatrix method to use on matrix and print out rotated matrix
 
         scanner.close();
-        }
     }
+}

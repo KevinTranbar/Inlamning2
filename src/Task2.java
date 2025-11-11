@@ -51,7 +51,7 @@ public class Task2 {
                 case "continue" -> {
                 }
                 case "exit" ->
-                    System.exit(1); //shut down program - break; -> exits switch, not do-while loop
+                        System.exit(1); //shut down program - break; -> exits switch, not do-while loop
 
                 default -> {
                     System.out.println("Invalid selection, enter 'continue' to continue and 'exit' to quit");
